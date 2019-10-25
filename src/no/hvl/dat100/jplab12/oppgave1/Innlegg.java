@@ -53,27 +53,25 @@ public abstract class Innlegg {
 	}
 	
 	public void doLike () {
-		TODO.method();
+		throw new UnsupportedOperationException(TODO.method());
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		TODO.method();
-		return false;
+		throw new UnsupportedOperationException(TODO.method());
+
 	}
 	
 	@Override
 	public String toString() {
 		
-		TODO.method();
-		return null;
+		throw new UnsupportedOperationException(TODO.method());
 				
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		
-		TODO.method();
-		return null;
+		throw new UnsupportedOperationException(TODO.method());
 				
 	}
 }
