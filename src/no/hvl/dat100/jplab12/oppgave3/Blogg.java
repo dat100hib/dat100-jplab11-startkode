@@ -59,7 +59,7 @@ public class Blogg {
 		
 	}
 	
-	public void slett(Innlegg innlegg) {
+	public boolean slett(Innlegg innlegg) {
 		
 		throw new UnsupportedOperationException(TODO.method());
 	}
