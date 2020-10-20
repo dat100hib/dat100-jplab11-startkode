@@ -17,12 +17,10 @@ import javax.swing.JOptionPane;
 
 public class LesBlogg {
 
-	private static String MAPPE = System.getProperty("user.dir") + "/src/no/hvl/dat100/tests/";
-
 	private static String TEKST = "TEKST";
 	private static String BILDE = "BILDE";
 
-	public static Blogg les(String filnavn) {
+	public static Blogg les(String mappe, String filnavn) {
 
 		throw new UnsupportedOperationException(TODO.method());
 
