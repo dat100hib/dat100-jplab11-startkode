@@ -1,7 +1,7 @@
-package no.hvl.dat100.jplab12.oppgave2;
+package no.hvl.dat100.jplab11.oppgave2;
 
-import no.hvl.dat100.jplab12.oppgave1.*;
-import no.hvl.dat100.jplab12.common.TODO;
+import no.hvl.dat100.jplab11.common.TODO;
+import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
 

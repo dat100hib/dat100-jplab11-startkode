@@ -1,4 +1,4 @@
-package no.hvl.dat100.jplab12.oppgave5;
+package no.hvl.dat100.jplab11.oppgave5;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,10 +8,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-import no.hvl.dat100.jplab12.common.TODO;
-import no.hvl.dat100.jplab12.oppgave1.*;
-import no.hvl.dat100.jplab12.oppgave2.*;
-import no.hvl.dat100.jplab12.oppgave3.*;
+import no.hvl.dat100.jplab11.common.TODO;
+import no.hvl.dat100.jplab11.oppgave1.*;
+import no.hvl.dat100.jplab11.oppgave2.*;
+import no.hvl.dat100.jplab11.oppgave3.*;
 
 import javax.swing.JOptionPane;
 

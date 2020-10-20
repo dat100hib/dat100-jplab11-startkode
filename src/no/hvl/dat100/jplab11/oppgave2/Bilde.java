@@ -1,6 +1,6 @@
-package no.hvl.dat100.jplab12.oppgave2;
+package no.hvl.dat100.jplab11.oppgave2;
 
-import no.hvl.dat100.jplab12.common.TODO;
+import no.hvl.dat100.jplab11.common.TODO;
 
 public class Bilde extends Tekst {
 
