@@ -19,6 +19,7 @@ public class SkrivBlogg {
 		return true; }
 	
 	catch (FileNotFoundException e) {
+		
 		javax.swing.JOptionPane.showMessageDialog(null, "Feil: finner ikke fil");
 		
 		return false;
