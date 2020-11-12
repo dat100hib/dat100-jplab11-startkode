@@ -24,34 +24,30 @@ public class Blogg {
 	}
 
 	public int getAntall() {
-		/*
-		 * int i = 0; while (iTab[i] != null && i < iTab.length) { i++; }
-		 */
 		return nesteledig;
 	}
 
 	public Innlegg[] getSamling() {
 		return iTab;
-
 	}
 
 	public int finnInnlegg(Innlegg innlegg) {
-		int i = 0;
-		while (iTab[i].erLik(innlegg) == false && i < nesteledig) {
-			i++;
+
+		int index = -1;
+		for (int i = 0; i < nesteledig; i++) {
+			if (iTab[i] == innlegg) {
+				index = i;
+			}
 		}
-		if (i == nesteledig) {
-			i = -1;
-		}
-		return i;
+		return index;
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		int i = 0;
+
 		boolean funnet = false;
-		while (funnet == false && i < nesteledig) {
+		for (int i = 0; !funnet && i < nesteledig; i++) {
 			funnet = iTab[i].erLik(innlegg);
-			i++;
+
 		}
 		return funnet;
 	}
@@ -66,7 +62,7 @@ public class Blogg {
 
 	public boolean leggTil(Innlegg innlegg) {
 		boolean b = false;
-		if (finnes(innlegg) == false) {
+		if (!finnes(innlegg)) {
 
 			iTab[nesteledig] = innlegg;
 			b = true;
@@ -87,23 +83,65 @@ public class Blogg {
 	// valgfrie oppgaver nedenfor
 
 	public void utvid() {
-		throw new UnsupportedOperationException(TODO.method());
+		Innlegg[] tempiTab = iTab;
+		lengde *= 2;
+		iTab = new Innlegg[lengde];
+
+		for (int i = 0; i < tempiTab.length; i++) {
+			iTab[i] = tempiTab[i];
+		}
 	}
 
 	public boolean leggTilUtvid(Innlegg innlegg) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		if (ledigPlass() && !finnes(innlegg)) {
+			utvid();
+		}
+
+		boolean lagtTil = leggTil(innlegg);
+
+		return lagtTil;
 
 	}
 
 	public boolean slett(Innlegg innlegg) {
+		boolean funnet = finnes(innlegg);
+		int indexDelete = finnInnlegg(innlegg);
+		int indexGone = 0;
+		if (funnet) {
+			Innlegg[] tempiTab = iTab;
+			iTab = new Innlegg[lengde];
+			nesteledig--;
 
-		throw new UnsupportedOperationException(TODO.method());
+			for (int i = 0; i < nesteledig; i++) {
+				if (i == indexDelete) {
+					i++;
+				}
+				iTab[indexGone] = tempiTab[i];
+				indexGone++;
+			}
+		}
+		return funnet;
 	}
 
 	public int[] search(String keyword) {
 
-		throw new UnsupportedOperationException(TODO.method());
-
+		
+		int[] tempTab = new int[lengde];
+		int found = 0;
+		String compare;
+		
+		for(int i = 0; i < lengde; i++) {
+			compare = iTab[i].toString();
+			if(compare.contains(keyword)) {
+				tempTab[found] = iTab[i].getId();
+				found++;
+			}
+		}
+		int[] tab = new int[found];
+		for(int i=0; i<found; i++) {
+			tab[i] = tempTab[i];
+		}
+		return tab;
 	}
 }
