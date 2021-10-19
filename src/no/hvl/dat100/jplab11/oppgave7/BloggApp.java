@@ -17,11 +17,11 @@ public class BloggApp {
 
 	public static String toHTML() {
 
-		Tekst innlegg1 = new Tekst(1, "Sven-Olai", "23-10-2020",
-				"Harald, hva er status for den siste obligatoriske innleveringen?");
-		Bilde innlegg2 = new Bilde(2, "Harald", "24-10-2020",
+		Tekst innlegg1 = new Tekst(1, "Sven-Olai", "23-10",
+				"Lars, hva er status for den siste obligatoriske innleveringen?");
+		Bilde innlegg2 = new Bilde(2, "Lars", "24-10",
 				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester",
-				"https://cdn1.bbcode0.com/uploads/2020/10/20/bbaeb2bf000360b087cd5f62a9967d12-full.png");
+				"https://home.hvl.no/ansatte/lmkr/dat100/junitscreenshot.png");
 
 		innlegg1.doLike();
 		innlegg1.doLike();
