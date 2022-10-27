@@ -10,9 +10,11 @@ public class SkrivBlogg {
 
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
 		boolean skrevet = false;
+		//THIS SHIOT IS THROWING SOMTHING AND I DONT UNDERSTADN WTFFFFFFF
 		String txt = samling.toString();
 		String path = mappe + filnavn;
 		
+		// this works but is it even right
 		try {
 			PrintWriter skriver = new PrintWriter(path);
 			

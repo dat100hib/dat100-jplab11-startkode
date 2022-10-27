@@ -73,6 +73,7 @@ public class Blogg {
 		return lagt;
 	}
 	
+	@Override
 	public String toString() {
 		String txt = nesteledig + "\n";
 		
