@@ -62,10 +62,13 @@ public class Blogg {
 	public boolean leggTil(Innlegg innlegg) {
 		boolean lagt = false;
 		
-		if (!finnes(innlegg)) {
+		if (!finnes(innlegg) && nesteledig < innleggtabell.length) {
 			innleggtabell[nesteledig] = innlegg;
+			nesteledig++;
 			return !lagt;
 		}
+		
+		return lagt;
 	}
 	
 	public String toString() {
