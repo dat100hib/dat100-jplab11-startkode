@@ -4,7 +4,6 @@ import no.hvl.dat100.jplab11.common.TODO;
 import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
-	// IS THIS HOW EXTENDS WORKS??
 	protected String tekst;
 	
 	public Tekst () {
@@ -12,18 +11,12 @@ public class Tekst extends Innlegg {
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
-		this.id = id;
-		this.bruker = bruker;
-		this.dato = dato;
-		this.likes = 0;
+		super(id, bruker, dato);
 		this.tekst = tekst;
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
-		this.id = id;
-		this.bruker = bruker;
-		this.dato = dato;
-		this.likes = likes;
+		super(id, bruker, dato, likes);
 		this.tekst = tekst;
 	}
 	
@@ -39,7 +32,7 @@ public class Tekst extends Innlegg {
 	public String toString() {
 		String txt = "TEKST\n";
 		
-		txt += id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n" + tekst + "\n";
+		txt += super.toString() + tekst + "\n";
 		
 		return txt;
 	}
