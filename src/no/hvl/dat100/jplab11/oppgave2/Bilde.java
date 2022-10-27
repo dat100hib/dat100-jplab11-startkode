@@ -3,24 +3,15 @@ package no.hvl.dat100.jplab11.oppgave2;
 import no.hvl.dat100.jplab11.common.TODO;
 
 public class Bilde extends Tekst {
-	// IS THIS HOW EXTEDNS WORKS???
 	protected String url;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-		this.id = id;
-		this.bruker = bruker;
-		this.dato = dato;
-		this.likes = 0;
-		this.tekst = tekst;
+		super(id, bruker, dato, tekst);
 		this.url = url;
 	}
 
 	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
-		this.id = id;
-		this.bruker = bruker;
-		this.dato = dato;
-		this.likes = likes;
-		this.tekst = tekst;
+		super(id, bruker, dato, likes, tekst);
 		this.url = url;
 	}
 	
@@ -36,7 +27,9 @@ public class Bilde extends Tekst {
 	public String toString() {
 		String txt = "BILDE\n";
 		
-		txt += id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n" + tekst + "\n" + url + "\n";
+		String supertxt = super.toString().substring(6);
+		
+		txt += supertxt + url + "\n";
 		
 		return txt;
 	}
