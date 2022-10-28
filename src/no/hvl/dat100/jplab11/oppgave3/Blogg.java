@@ -144,10 +144,10 @@ public class Blogg {
 		
 		for (int i = 0; i < nesteledig; i++) {
 			int id = innleggtabell[i].getId();
+			// get tekst
+			// seperate text by space then check if key word is in there
+			// add ids to list
 		}
-		
-		// looking for the word in the tekst string
-		// and return ids
 		
 		return ids;
 	}
