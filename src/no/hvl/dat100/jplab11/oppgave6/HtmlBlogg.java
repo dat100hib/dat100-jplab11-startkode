@@ -16,9 +16,10 @@ public class HtmlBlogg extends Blogg {
 	private static String HTMLPOSTFIX = 
 			"\t</body>\n</html>";
 	
-	@Override
 	public String toString() {
-		String txt = HTMLPREFIX + super.toString() + HTMLPOSTFIX
+		String txt = HTMLPREFIX + super.toString() + HTMLPOSTFIX;
+		
+		return txt;
 		
 	}
 }
