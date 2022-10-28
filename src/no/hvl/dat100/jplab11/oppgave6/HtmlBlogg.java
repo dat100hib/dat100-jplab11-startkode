@@ -17,8 +17,11 @@ public class HtmlBlogg extends Blogg {
 			"\t</body>\n</html>";
 	
 	public String toString() {
-		String txt = HTMLPREFIX + super.toString() + HTMLPOSTFIX;
+		String txt = HTMLPREFIX;
 		
+		txt += HTMLPOSTFIX;
+		
+		System.out.print(txt);
 		return txt;
 		
 	}

@@ -36,8 +36,10 @@ public class Bilde extends Tekst {
 
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
+		String txt = super.toHTML();
 		
-		throw new UnsupportedOperationException(TODO.method());
-				
+		txt += ;
+		
+		return txt;
 	}
 }

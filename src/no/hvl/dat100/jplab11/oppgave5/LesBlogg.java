@@ -21,8 +21,14 @@ public class LesBlogg {
 	private static String BILDE = "BILDE";
 
 	public static Blogg les(String mappe, String filnavn) {
-
-		throw new UnsupportedOperationException(TODO.method());
-
+		Blogg blogg; // when inizlize give it lenght based of of the file
+		String path = mappe + filnavn;
+		
+		// open and read file
+		// create objects
+		// leggtil blogg
+		// close file
+		
+		return blogg;
 	}
 }
