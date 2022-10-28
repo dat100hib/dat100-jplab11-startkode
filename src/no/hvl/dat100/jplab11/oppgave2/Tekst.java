@@ -1,12 +1,12 @@
 package no.hvl.dat100.jplab11.oppgave2;
 
-import no.hvl.dat100.jplab11.common.TODO;
+// import no.hvl.dat100.jplab11.common.TODO;
 import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
 	protected String tekst;
 	
-	public Tekst () {
+	public Tekst () { 
 		
 	}
 	
@@ -38,10 +38,11 @@ public class Tekst extends Innlegg {
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
+	
 	public String toHTML() {
 		String txt = super.toHTML();
 		
-		txt += "<p>" + tekst + "</p>\n";
+		txt += "\t\t<p>" + tekst + "</p>\n";
 		
 		return txt;
 	}

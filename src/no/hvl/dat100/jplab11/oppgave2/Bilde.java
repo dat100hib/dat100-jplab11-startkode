@@ -1,6 +1,6 @@
 package no.hvl.dat100.jplab11.oppgave2;
 
-import no.hvl.dat100.jplab11.common.TODO;
+// import no.hvl.dat100.jplab11.common.TODO;
 
 public class Bilde extends Tekst {
 	protected String url;
@@ -35,10 +35,11 @@ public class Bilde extends Tekst {
 	}
 
 	// Metoden nedenfor er kun for valgfri oppgave 6
+	
 	public String toHTML() {
 		String txt = super.toHTML();
 		
-		txt += ;
+		txt += "\t\t<iframe src=" + url + " height=600 width=800></iframe>\n";
 		
 		return txt;
 	}

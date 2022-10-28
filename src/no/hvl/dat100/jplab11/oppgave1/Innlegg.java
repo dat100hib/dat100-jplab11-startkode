@@ -1,13 +1,12 @@
 package no.hvl.dat100.jplab11.oppgave1;
 
-import no.hvl.dat100.jplab11.common.TODO;
+// import no.hvl.dat100.jplab11.common.TODO;
 
 public abstract class Innlegg {
 	protected int id;
 	protected String bruker;
 	protected String dato;
 	protected int likes;
-	
 	
 	public Innlegg() {
 		
@@ -73,8 +72,9 @@ public abstract class Innlegg {
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
+	
 	public String toHTML() {
-		String txt = "\t\t<h2>" + bruker + "@" + dato + "[" + likes + "]" + "</h2>\n";
+		String txt = "\t\t<h2>" + bruker + "@" + dato + " [" + likes + "]" + "</h2>\n";
 		
 		return txt;
 	}

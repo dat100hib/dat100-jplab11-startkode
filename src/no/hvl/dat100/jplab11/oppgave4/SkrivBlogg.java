@@ -10,11 +10,10 @@ public class SkrivBlogg {
 
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
 		boolean skrevet = false;
-		
+		String txt = samling.toString();
 		String path = mappe + filnavn;
 
 		try {
-			String txt = samling.toString();
 			PrintWriter skriver = new PrintWriter(path);
 			
 			skriver.print(txt);
