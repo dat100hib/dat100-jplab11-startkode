@@ -22,7 +22,6 @@ public class HtmlBlogg extends Blogg {
 		
 		for(int i = 0; i < super.getAntall(); i++) {
 			txt += innleggtabell[i].toHTML() + "\t\t<hr>\n";
-			
 		}
 		
 		txt += HTMLPOSTFIX;
