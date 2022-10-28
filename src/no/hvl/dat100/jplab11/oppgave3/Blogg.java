@@ -140,8 +140,15 @@ public class Blogg {
 	}
 	
 	public int[] search(String keyword) {
+		int[] ids = new int[nesteledig];
 		
-		throw new UnsupportedOperationException(TODO.method());
-
+		for (int i = 0; i < nesteledig; i++) {
+			int id = innleggtabell[i].getId();
+		}
+		
+		// looking for the word in the tekst string
+		// and return ids
+		
+		return ids;
 	}
 }
