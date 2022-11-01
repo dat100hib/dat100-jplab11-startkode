@@ -19,8 +19,8 @@ public class SkrivBlogg {
 			skriver.print(txt);
 			
 			skriver.close();
+			
 			return !skrevet;
-		// more catches maybe????
 		} catch (FileNotFoundException e) {
 			return skrevet;
 		}
