@@ -60,7 +60,7 @@ public class Blogg {
 
 	public boolean ledigPlass() {
 
-		return nesteledig < innleggtabell.length -1;
+		return nesteledig < innleggtabell.length;
 	}
 
 	public boolean leggTil(Innlegg innlegg) {
@@ -76,9 +76,9 @@ public class Blogg {
 	}
 
 	public String toString() {
-		
+
 		String tab = "" + nesteledig + "\n";
-		
+
 		for (int i = 0; i < nesteledig; i++) {
 			tab += innleggtabell[i];
 		}
