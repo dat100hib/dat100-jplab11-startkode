@@ -89,23 +89,65 @@ public class Blogg {
 	// valgfrie oppgaver nedenfor
 
 	public void utvid() {
-		throw new UnsupportedOperationException(TODO.method());
+
+		if (!ledigPlass()) {
+			Innlegg[] reftab = new Innlegg[innleggtabell.length * 2];
+
+			for (int i = 0; i < innleggtabell.length; i++) {
+				reftab[i] = innleggtabell[i];
+			}
+			innleggtabell = reftab;
+		}
 	}
 
 	public boolean leggTilUtvid(Innlegg innlegg) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		boolean lagtTil = false;
 
+		if (!leggTil(innlegg)) {
+			utvid();
+		}
+		leggTil(innlegg);
+		return lagtTil;
 	}
 
 	public boolean slett(Innlegg innlegg) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		boolean slettet = false;
+		int pos = finnInnlegg(innlegg);
+
+		if (pos >= 0) {
+			innleggtabell[pos] = innleggtabell[nesteledig - 1];
+			innleggtabell[nesteledig - 1] = null;
+			nesteledig--;
+			slettet = true;
+		}
+		return slettet;
 	}
 
 	public int[] search(String keyword) {
+		
+		int[] match = new int[innleggtabell.length];
+		int nesteMatch = 0;
 
-		throw new UnsupportedOperationException(TODO.method());
+		for (int i = 0; i < innleggtabell.length; i++) {
 
+			String innlegg = innleggtabell[i].toString();
+			String regex = "( |,|\\.|\n|:|/)+";
+			String[] ordTab = innlegg.split(regex);
+
+			int j = 0;
+			boolean funnet = false;
+			
+			do {
+				if (keyword.equals(ordTab[j])) {
+					match[nesteMatch] = i;
+					nesteMatch++;
+					funnet = true;
+				}
+				j++;
+			} while (j < ordTab.length && !funnet);			
+		}
+		return match;
 	}
 }
